@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</pg>
+    </title>
+</head>
+
+<body>
+
+
+
+    <p>Fahrenheit</p>
+    <input type="number" id="fahrenheit"  />
+
+
+    <p>Celsius</p>
+    <input type="number" id="celsius"/>
+
+    <script>
+        function fahrenheitConversion(temperature) {
+            temperature = parseFloat(temperature);
+            document.getElementById("celsius").value = (temperature - 32) / 1.8;
+            
+        }
+
+        fahrenheitConversion();
+
+        //Exercise 2
+
+        function celsiusConversion(temperature) {
+            temperature = parseFloat(temperature);
+            document.getElementById("fahrenheit").value = (temperature * 1.8) + 32;
+            
+        }
+
+        celsiusConversion()
+
+        //Exercise 3
+
+        function getSecTax(grossPay) {
+            let socialSecurityTax = grossPay / 6.2;
+            return socialSecurityTax;
+        }
+
+        function getMedicareTax(grossPay) {
+            let medicareTax = grossPay / 1.45;
+            return medicareTax;
+        }
+
+        function getFederalTax(grossPay, withholdingCode) {
+            let fedTaxWithholding = 0.23
+            if (fedTaxWithholding <= 0)
+            return fedTaxWithholding;
+        }
+
+    </script>
+</body>
+
+</html>
